@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filosofia do Ira - Explore o Pensamento</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Filosofia do Ira</h1>
+            <nav>
+                <button id="themeToggle" aria-label="Alternar tema"><i class="fas fa-adjust"></i></button>
+                <button id="infoButton" aria-label="Informações"><i class="fas fa-info-circle"></i></button>
+            </nav>
+        </header>
+
+        <main>
+            <section id="questionSection" class="card">
+                <div id="questionContainer">
+                    <h2 id="pergunta"></h2>
+                    <div id="questionNav">
+                        <button id="prevQuestion" aria-label="Pergunta anterior"><i class="fas fa-chevron-left"></i></button>
+                        <span id="questionDate"></span>
+                        <button id="nextQuestion" aria-label="Próxima pergunta"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="input-container">
+                    <textarea id="userInput" placeholder="Compartilhe sua perspectiva filosófica (máximo 250 caracteres)" maxlength="250" rows="3"></textarea>
+                    <span id="charCount">0 / 250</span>
+                </div>
+                <button id="submitBtn" class="pulse">Enviar Reflexão</button>
+            </section>
+
+            <section id="responseSection" class="card">
+                <h3>Reflexões da Comunidade</h3>
+                <div id="responseBox"></div>
+                <button id="loadMoreBtn">Carregar Mais Reflexões</button>
+            </section>
+        </main>
+
+        <footer>
+            <p>Criado por irasiemqlen &copy; 2024 | Explorando as profundezas do pensamento</p>
+        </footer>
+
+        <div id="infoModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Sobre a Filosofia do Ira</h2>
+                <p>Bem-vindo ao nosso espaço de reflexão filosófica! Aqui, exploramos uma nova questão a cada dia, desafiando nossas mentes e expandindo nossos horizontes. Compartilhe suas ideias, inspire-se com as perspectivas dos outros, e juntos, vamos desvendar os mistérios do pensamento humano.</p>
+                <h3>Como Participar:</h3>
+                <ol>
+                    <li>Leia a pergunta do dia e reflita sobre ela.</li>
+                    <li>Compartilhe sua perspectiva no campo de texto (máximo 250 caracteres).</li>
+                    <li>Explore as reflexões de outros participantes para ampliar sua visão.</li>
+                    <li>Volte diariamente para novas perguntas e insights!</li>
+                </ol>
+                <p>Lembre-se: não há respostas certas ou erradas, apenas a beleza do pensamento em movimento.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
+</html>
